@@ -18,12 +18,21 @@ def selection_sort( arr ):
 
     return arr
 
-arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
-print("Sorted: ",selection_sort(arr1))
-
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-
+    should_continue = True
+    while should_continue:
+        for i in range(0, len(arr) - 1):
+            if arr[i] > arr[i + 1]:
+                temp = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = temp
+                i += 1
+            elif arr[i] < arr[i + 1]:
+                i += 1
+                should_continue = True
+            elif arr[i] < arr[i + 1] in range(0, len(arr) - 1):
+                should_continue = False
     return arr
 
 
